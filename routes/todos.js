@@ -1,7 +1,9 @@
 const express = require("express");
 const Todo = require("../models/Todo");
 const router = express.Router();
+
 //backend mimi //backend marti // backend karla
+
 router.get("/", async (req, res) => {
   try {
     const todos = await Todo.find({ deleted: false });
