@@ -28,7 +28,12 @@ const TodoSchema = mongoose.Schema({
   deletedAt: {
     type: Date,
     default: null,
-  },
+  }, 
+  image: {
+    type: String,
+    default: null,
+    required: true,
+  }
 });
 
 module.exports = mongoose.model("todos", TodoSchema);
