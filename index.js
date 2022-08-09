@@ -4,11 +4,13 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const todoRoute = require("./routes/todos");
+const userRoute = require("./routes/users");
 require("dotenv").config();
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/todos", todoRoute);
+app.use("/users", userRoute);
 
 const mongoUri = process.env.MONGODB_URI;
 
