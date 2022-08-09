@@ -23,4 +23,6 @@ mongoose
     console.log({ error });
   });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
+
+console.log(process.env.PORT);
